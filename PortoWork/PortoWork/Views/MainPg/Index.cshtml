@@ -1,0 +1,261 @@
+﻿@model PortoWork.Models.ViewModel
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_PortoLayout.cshtml";
+}
+
+
+
+
+<section id="slider">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="owl-carousel owl-theme">
+
+
+                    <div class="item">
+                        <img src="~/content/img/slider1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+
+
+<section id="company">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-4">
+                    <h2>Who We Are</h2>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="col-md-2">
+                    <img src="~/content/img/bckr3.png">
+                </div>
+                <div class="col-md-6">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing metus elit. Quisque rutrum pellentesque imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum pellentesque imperdiet. Nulla lacinia iaculis nulla.</p>
+                    <a href="#"> Learn More<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="col-md-12">Services</h2>
+                <p class="col-md-12"> Lorem ipsum dolor sit amet.</p>
+            </div>
+            @foreach (var item in Model.service)
+            {
+                <div class="col-md-6 pull-left">
+                    <div class="col-md-2">
+                        <img src="~/content/img/ser1.png" class="pull-left">
+                    </div>
+                    <div class="col-md-10">
+                        <h3 class="col-md-12">@item.serv_name</h3>
+                        <p>
+                           @item.serv_about
+                        </p>
+                        <a href="service-detal.html"> Learn More<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            }
+          
+          
+            <div class="romb1 "></div>
+            <div class="romb2 "></div>
+        </div>
+    </div>
+
+</section>
+
+<section id="projects">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-7">
+                    <h1>Projects</h1>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="col-md-2">
+                    <div class="small">
+                        <a href="~/content/img/6.jpg">
+                            <img src="~/content/img/6.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="col-md-4">
+                    <div class="big">
+                        <a href="~/content/img/3.jpg">
+                            <img src="~/content/img/3.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="big">
+                        <a href="~/content/img/4.jpg">
+                            <img src="~/content/img/4.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="big">
+                        <a href="~/content/img/1.jpg">
+                            <img src="~/content/img/5.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="col-md-6">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing metus elit. Quisque rutrum pellentesque imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing metus elit. Quisque rutrum pellentesque imperdiet.</p>
+                    <button><a href="projects.html">View All Peojects</a></button>
+                </div>
+                <div class="col-md-4">
+                    <div class="big">
+                        <a href="~/content/img/7.jpg">
+                            <img src="~/content/img/7.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-1 up">
+                    <div class="small">
+                        <a href="~/content/img/1.jpg">
+                            <img src="~/content/img/1.jpg" alt="">
+                        </a>
+                    </div>
+                </div><div class="col-md-1 pull-right down">
+                    <div class="small">
+                        <a href="~/content/img/2.jpg">
+                            <img src="~/content/img/2.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+</section>
+
+
+
+
+
+<section id="magazine">
+    <div class="testemonial">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+
+                    <div class="col-md-6  ">
+
+                        <div class="text">
+                            <i class="pull-left fa fa-quote-left fa-2x" aria-hidden="true"></i>
+                            <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce ante tellus, convallis non consectetur sed, pharetra nec ex.</p>
+                            <i class="pull-right fa fa-quote-right fa-2x" aria-hidden="true"></i>
+                            <h3>Ana Smith</h3>
+                            <p>Porto Magazine</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="text">
+                            <i class="pull-left fa fa-quote-left fa-2x" aria-hidden="true"></i>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <i class="pull-right fa fa-quote-right fa-2x" aria-hidden="true"></i>
+                            <h3>Jessica Smith</h3>
+                            <p>Porto Magazine</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4 pull-right">
+                    <div class="next pull-left"></div>
+                    <div class="prev"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section id="logo">
+    <div class="container">
+        <div class="row">
+
+            <div class="prev">
+                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            </div>
+            <div class="slider-holder">
+                <div class="slider">
+                    <div class="image"><img class="img-responsive" src="~/content/img/log/1.png" alt=""></div>
+                    <div class="image"><img class="img-responsive" src="~/content/img/log/2.png" alt=""></div>
+                    <div class="image"><img class="img-responsive" src="~/content/img/log/3.png" alt=""></div>
+                    <div class="image"><img class="img-responsive" src="~/content/img/log/4.png" alt=""></div>
+                    <div class="image"><img class="img-responsive" src="~/content/img/log/5.png" alt=""></div>
+                    <div class="image"><img class="img-responsive" src="~/content/img/log/6.png" alt=""></div>
+                    <div class="image"><img class="img-responsive" src="~/content/img/log/2.png" alt=""></div>
+                    <div class="image"><img class="img-responsive" src="~/content/img/log/3.png" alt=""></div>
+                </div>
+            </div>
+
+            <div class="next pull-right">
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Blog</h1>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+            @foreach (var item in Model.blog.OrderByDescending(item=>item.add_date1).Take(3))
+            {
+                <div class="col-md-4" style="margin-left:5px; overflow:hidden;">
+                    <div class="col-md-12">
+                        <a href="~/BlogDetail/Index/@item.blog_id">
+                            <img src="~/Content/img/@item.img_name" style="width:425px;height:200px;" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="col-md-3">
+                            <div class="date">
+                                <h3>@item.add_date1.Day</h3>
+                                <p>@item.add_date1.ToString("MMM")</p>
+                            </div>
+                        </div>
+                        <a href="~/BlogDetail/Index/@item.blog_id">
+                            <h4>@item.title</h4>
+                        </a>
+                        <p>@item.User1.user_name</p>
+                    </div>
+                    <div class="col-md-12">
+                        <p>@item.head_text</p>
+                        <a href="~/BlogDetail/Index/@item.blog_id"> Read More<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            }
+          
+ 
+        </div>
+    </div>
+
+    <div class="romb"></div>
+
+</section>

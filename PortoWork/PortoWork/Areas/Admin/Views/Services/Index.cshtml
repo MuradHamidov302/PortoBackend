@@ -1,0 +1,52 @@
+﻿@model IEnumerable<PortoWork.Models.Service>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.serv_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.serv_about)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.serv_icon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.img_name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.serv_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.serv_about)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.serv_icon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.img_name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.serv_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.serv_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.serv_id })
+        </td>
+    </tr>
+}
+
+</table>

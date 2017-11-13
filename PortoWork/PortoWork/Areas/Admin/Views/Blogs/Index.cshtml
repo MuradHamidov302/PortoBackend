@@ -1,0 +1,64 @@
+﻿@model IEnumerable<PortoWork.Models.Blog>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.User1.user_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.head_text)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.main_text)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.img_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.add_date1)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.User1.user_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.head_text)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.main_text)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.img_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.add_date1)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.blog_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.blog_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.blog_id })
+        </td>
+    </tr>
+}
+
+</table>

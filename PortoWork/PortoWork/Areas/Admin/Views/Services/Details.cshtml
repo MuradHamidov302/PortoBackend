@@ -1,0 +1,51 @@
+﻿@model PortoWork.Models.Service
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Service</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.serv_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.serv_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.serv_about)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.serv_about)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.serv_icon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.serv_icon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.img_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.img_name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.serv_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

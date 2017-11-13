@@ -1,0 +1,170 @@
+#header{
+	width: 100%;
+	background:white;
+	margin-top:24px;
+	position:fixed;
+	z-index:2;
+
+	
+	.img-wrapper {
+		width:324px;
+		img {
+			width:100%;
+			margin: -37px -70px -102px 0;
+		}
+		img:last-child{
+			display: none;
+		}
+	}
+	.bar{	
+			display: none;
+			width: 40px;
+			border-radius: 9%;
+			height: 40px;
+			color: white;
+			background:#E04622;
+			padding: 7px;
+			 margin: 17px 0 10px 60px;
+			 cursor: pointer;
+	}
+	.col-md-7{
+		.navbar.active {
+			display:block;
+		}
+		
+
+		ul{
+			
+			li{	
+			.dropdown-menu{
+			
+			li{
+				background: white;
+
+				a{
+					padding: 10px 4px;
+				}
+			}
+		}	
+				
+				a{
+					font-size: 12px;
+					color: black;
+					padding-top: 30px;
+					padding-bottom: 30px;
+					}
+				}
+				
+					.dropdown:hover{
+						.dropdown-menu{
+
+						display: inline-block;
+						}
+					}
+					a:hover{
+						color:white;
+						background:#E04622;
+					}
+					
+				
+		}
+	}
+
+
+	.ikon{
+	
+		i{
+			margin: 27px 0;
+			border-radius:100%;
+			width: 25px;
+			height: 25px;
+			padding:7px;
+		}
+		.fc:hover{
+
+			color:white;
+			background:#3B5998;
+
+		}
+		 .tw:hover{
+			color:white;
+			background:#1DA1F2;
+
+		}
+			}
+		
+}
+
+@media screen and (max-width: 991px) {
+   #header{
+   background: transparent;
+   	margin-top: 0;
+
+   	
+	img:first-child{
+		display: none;
+	}
+   	.img-wrapper {
+   		img:last-child{
+  	 	display: block;
+    	width: 63%;
+    	margin: 10px 0;
+   	}
+   }
+   
+			.bar{
+				
+				display: inline-block;
+			}
+			.fc, .tw, .nav{
+				display: none;
+			}
+			.col-md-7{
+		.navbar.active {
+			display:block;
+		}
+
+		ul{
+			
+			>li{
+				display: block;
+				background: white;
+				min-width: 500px;
+				a:focus{
+					background:white;
+					color: #E04622;
+
+				}		
+				
+				a{
+
+					font-size: 12px;
+					color: black;
+					padding-top: 5px;
+					padding-bottom: 5px;
+					}
+				}
+				li:hover {
+					max-width: 200px;
+					.dropdown-menu{
+						display: inline-block;
+						
+						a{
+							width: 100%;
+						}
+					}
+					a:hover {
+						color:white;
+						background:#E04622;
+					}
+				}
+		}
+	}
+
+				
+	}
+}
+
+
+
+// ---------------

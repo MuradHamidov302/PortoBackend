@@ -1,0 +1,419 @@
+// ---------------------------------
+#slider{
+
+	img{
+		width: 100%;
+		height: cover;
+	}
+
+
+
+	
+}
+
+
+// ---------------------------------
+
+#company{
+	margin:25px 0;
+	
+	padding:45px 0;
+	p{
+			color:#8977A3;
+		}
+	.col-md-6{
+		margin:25px 0;
+		h2{
+			color:#2E353E;
+		}
+	
+		a{
+			color:#E04622;
+			i{
+				padding:4px;
+			}
+		}
+	}
+
+}
+
+
+@media screen and (max-width: 991px) {
+   #company{
+	.col-md-2{
+		display: none
+	}
+
+}
+}
+
+// ----------------------------------------------
+
+#services{
+	overflow: hidden;
+	background:#EAEFF3;
+	
+	padding-bottom: 50px;
+		.row{
+			position: relative;
+		}
+	p{
+		color:#5E5E5E;
+	}
+	h3{
+		padding:0;
+		}
+	.col-md-12{
+		
+		p{
+			padding-bottom:20px;
+			font-size: 21px;
+			font-weight: 300;
+		}
+	}
+	.col-md-6{
+		padding:20px;
+	
+	
+	img{
+		width: 50px;
+		height: 55px;
+	}
+	a{
+			color:#E04622;
+			i{
+				padding:4px;
+			}
+		}
+	}
+
+	.romb1{
+		width:281px;
+		height: 281px;
+		background:#E04622;
+		transform: rotate(50deg);
+		position: absolute;
+		 left: 76%;
+   		 top: 102%;
+
+	}
+	.romb2{
+		width:281px;
+		height: 281px;
+		background:black;
+		transform: rotate(50deg);
+		position: absolute;
+		left: 70%;
+    	top: 105%;
+}
+    
+	
+	
+}
+@media screen and (max-width: 991px) {
+   #services{
+
+
+	.romb1, .romb2{
+		display: none
+		}
+
+	}
+}
+// =-----------------------------------------------
+
+
+#projects{
+	background: url(../img/bckr4.png) no-repeat center 45%;
+	padding-top:50px;
+	
+	
+	
+
+	img{
+		cursor: pointer;
+	}
+	
+	p{
+	color:#897980;
+	font-size: 1.1em;
+}
+	
+.col-md-12:nth-child(1) {
+		margin-bottom:-100px;
+		.small{
+    top:84px;}
+	}
+
+.col-md-12:nth-child(3) {
+	p{
+		padding-top: 60px;
+		}
+.up{
+	.small:nth-child(1){
+	
+    top: -100px;
+    right: -24px;
+    	}
+	}
+    .down{
+	.small{
+		 right: 175px;
+	}
+}
+    .big{
+    	top: -160px;
+    }
+}
+	.small{
+		margin:50px auto;
+	 	display:block;
+ 	 	overflow:hidden;
+		position:relative;
+		width: 130px;
+		height: 130px;
+		transform: rotate(45deg);
+		img{
+			position:relative;
+			transform: rotate(-45deg);
+			width: 195px;
+			height: 195px;
+			position:absolute;
+ 			top:-25px;
+ 			left:-35px;
+ 			}
+		}
+		
+		.big{
+			margin:50px auto;
+			 display:block;
+			  overflow:hidden;
+			position:relative;
+			width: 250px;
+			height: 250px;
+			transform: rotate(45deg);
+		img{
+			position:relative;
+			transform: rotate(-45deg);
+			width: 375px;
+			height: 375px;
+			position:absolute;
+ 			top:-60px;
+ 			left:-50px;}
+		}
+		
+		button {
+			a{
+				text-decoration: none;
+				color: #E04622;
+			}
+			margin-top: 40px;
+			width: 130px;
+			height: 32px;
+			border:3px solid #E04622;
+			
+			background:transparent;
+		}
+		button:hover{
+			a{
+				color: white;
+			}
+			background:#e35938;
+			
+		}
+	
+	
+}
+
+
+
+@media screen and (max-width: 991px) {
+   #projects{
+	.row{
+		.col-md-12:nth-child(1) .small {
+			margin:50px auto;
+ 			display:block;
+ 			overflow:hidden;
+			position:relative;
+			width: 250px;
+			height: 250px;
+			transform: rotate(45deg);
+			    top: -175px;
+			img{
+				
+				width: 375px;
+				height: 375px;
+				position:absolute;
+ 				top:-60px;
+ 				left:-50px;
+				}
+			}	
+	
+		}
+	}
+}
+
+// -------------------------------
+#magazine{
+background:url(../img/bckr5.jpg) no-repeat center;
+	background-size: cover;
+	
+.testemonial{
+	width: 1220px;
+	margin:0 auto;
+	overflow: hidden;
+	
+	.col-md-12{
+		margin-left: 600px;
+		overflow:hidden;
+	 .text{
+		position:relative;
+		padding:20% 10%;
+			p{
+			color: #777;
+			font-size: 1.3em;
+			text-align: center;
+
+			i{
+				color: #777;
+				padding:0 40px;
+			}
+		}
+		h3{
+			text-align: center;
+		}
+	}
+}
+	.col-md-4{
+		padding-bottom: 5%;
+	.next:hover, .prev:hover{
+		background:#E04622;
+	}
+	.next{
+		position:relative;
+		width: 15px;
+		height: 15px;
+		border-radius: 100%;
+		background:#D6D6D6;
+		cursor: pointer;
+		left:130px;
+	
+		}
+	.prev{
+		position:relative;
+		width: 15px;
+		height: 15px;
+		border-radius: 100%;
+		background:#D6D6D6;
+		cursor: pointer;
+		left:70px;
+			}
+		}
+
+	}
+}
+
+
+// ------------------------------------
+#logo{
+	padding-top: 50px;
+
+	.next, .prev{
+		padding-top: 6px;
+		cursor: pointer;
+		text-align: center;
+		color:gray;
+		border:solid 1px gray;
+		float: left;
+		width: 35px;
+		height: 35px;
+	}
+
+	.slider-holder{
+		padding-bottom: 30px;
+		border-bottom: solid 1px silver;
+		float: left;
+		width: 1055px;
+		overflow: hidden;
+		position: relative;
+		.slider{
+			position: relative;
+			width:1500px; 
+			left:0;
+			.image{
+				width: 170px;
+				height: 60px;
+				display: inline-block;
+				img{
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+// -----------------------------
+
+
+#blog{
+	padding-bottom: 50px;
+	overflow: hidden;
+	position: relative;
+		.col-md-12{
+			padding-top:20px;
+		
+			.col-md-3{
+				padding-left:0;
+				.date{
+					text-align: center;
+					width: 40px;
+					height: 60px;
+					h3{
+						background:#F7F7F7;
+						color:#E04622;
+					}
+					p{
+						color:#F7F7F7;
+						background:#E04622;
+						}
+					}
+				}
+			
+		}
+
+	p{
+		color:#897980;
+	}
+	img{
+		width: 100%;
+		cursor: pointer;
+	}
+
+	a{
+			color:#E04622;
+			i{
+				padding:4px;
+			}
+		}
+
+	.romb{
+		width:160px;
+		height: 160px;
+		transform: rotate(50deg);
+		position: absolute;
+		background: #E04622;
+		left: -40px;
+	}
+	
+}
+
+@media screen and (max-width: 1090px) {
+   #blog{
+	.romb{
+		display: none
+		}
+
+	}
+}
+
+// ----------------------------------------------

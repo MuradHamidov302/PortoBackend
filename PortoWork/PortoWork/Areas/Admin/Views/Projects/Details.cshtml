@@ -1,0 +1,75 @@
+﻿@model PortoWork.Models.Project
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Project</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.City.city_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City.city_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Service.serv_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Service.serv_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User1.user_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User1.user_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pro_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pro_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pro_text)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pro_text)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.img_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.img_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cost)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.pro_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

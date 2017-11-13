@@ -1,0 +1,52 @@
+﻿@model IEnumerable<PortoWork.Models.Blog>
+@{
+    ViewBag.Title = "Blog";
+    Layout = "~/Views/Shared/_PortoLayout.cshtml";
+}
+
+
+
+<section id="blog-pg">
+    <div class="head  ">
+        <h1 class=" pull-right">Blog</h1>
+
+    </div>
+    <div class="container">
+        <div class="row">
+           @foreach (var item in Model.OrderByDescending(item=>item.add_date1))
+           {
+            <div class="col-md-6">
+                <div class="col-md-12">
+                    <a href="~/BlogDetail/Index/@item.blog_id">
+                        <img src="~/Content/img/@item.img_name" style="width:425px;height:200px;" alt="">
+                    </a>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-3">
+                        <div class="date">
+                            <h3>@item.add_date1.Day</h3>
+                            <p>@item.add_date1.ToString("MMM")</p>
+                        </div>
+                    </div>
+                    <a href="~/BlogDetail/Index/@item.blog_id">
+                        <h4>@item.title</h4>
+
+                    </a>
+                    <p>@item.User1.user_name</p>
+                    @if (Convert.ToInt32(Session["userid"]) == item.user_id || Convert.ToInt32(Session["usertype"]) ==2)
+                    {
+                        <a class="btn btn-danger" style="color:white;" href="~/Blog/Remove/@item.blog_id">Remove</a>
+                    }
+                </div>
+                <div class="col-md-12">
+                    <p>@item.head_text</p>
+                    <a href="~/BlogDetail/Index/@item.blog_id"> Read More<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+           }
+            
+        
+
+        </div>
+    </div>
+</section>

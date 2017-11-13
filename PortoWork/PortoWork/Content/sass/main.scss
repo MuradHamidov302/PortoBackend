@@ -1,0 +1,17 @@
+html{
+	min-height:100%;
+
+}
+
+.clear{
+	clear: both;
+}
+
+@import "home";
+@import "header";
+@import "company";
+@import "services";
+@import "projects";
+@import "contact";
+@import "blog";
+@import "footer";

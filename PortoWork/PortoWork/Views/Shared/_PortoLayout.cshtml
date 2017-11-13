@@ -1,0 +1,168 @@
+﻿
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Porto</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="~/content/https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/content/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="~/content/css/main.css">
+
+    <link rel="stylesheet" href="~/content/css/owl.carousel.min.css">
+
+
+
+</head>
+<body>
+
+    <section id="header">
+        <div class="container-fluid container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-3">
+                        <div class="img-wrapper">
+                            <img src="~/content/img/portoend.png">
+                            <img class="pull-left" src="~/content/img/portoend.png">
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <i class="fa fa-bars fa-2x bar pull-right" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-md-7">
+
+                        <ul class="nav navbar-nav navbar">
+                            <li>@Html.ActionLink("Home","Index","MainPg")</li>
+                            <li>@Html.ActionLink("Company","Index","Company")</li>
+                            <li class="dropdown">
+                                <a href="/Service/Index" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    SERVICE <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                   
+                                   
+                                        <li>@Html.ActionLink("Home" , "Index", "Service")</li>
+                                 
+                                </ul>
+                            </li>
+                            <li>
+                            <li>@Html.ActionLink("Project", "Index", "Project")</li>
+                            <li>@Html.ActionLink("Blog", "Index", "Blog")</li>
+                            <li>@Html.ActionLink("Contact", "Index", "Contact")</li>
+
+                            <li class="dropdown">
+                                @if (Session["userid"] == null)
+                                {
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        Login
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>@Html.ActionLink("Sing in", "Login1", "Login")</li>
+                                        <li>@Html.ActionLink("Register", "Create", "Login")</li>
+                                        
+
+                                    </ul>
+                                }
+                                else
+                                {
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                       Hello @Session["username"].ToString()
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="/Login/Index/@Session["userid"]">Profil</a></li>
+
+                                    @if(Convert.ToInt32(Session["usertype"])==2)
+                                    {
+                                        <li>@Html.ActionLink("AdminPanel", "Index", "Admin/Home")</li>
+                                        <li>@Html.ActionLink("Add project", "Create", "Admin/Projects")</li>
+                                        <li>@Html.ActionLink("Add services", "Create", "Admin/Services")</li>
+                                    }
+                                         
+                                        <li>@Html.ActionLink("Add Blog", "Blogadd", "AddCommon")</li>
+                                        
+                                        <li>@Html.ActionLink("Log out", "Logout", "Login")</li>
+
+                                    </ul>
+                                    
+                                }
+
+
+                               
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ikon">
+                        <i class="fa fa-facebook  fc" aria-hidden="true"></i>
+                        <i class="fa fa-twitter tw" aria-hidden="true"></i>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @RenderBody()
+
+
+
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-3">
+                    <img src="~/content/img/portoend.png" alt="">
+                </div>
+                <div class="col-md-4">
+                    <div class="col-md-6 pull-bottom">
+                        <h3>Navigation</h3>
+                        <a href="index.html"> <p>Home</p></a>
+                        <a href="company.html"><p>Company</p></a>
+                        <a href="services.html"> <p>Services</p></a>
+                    </div>
+                    <div class="col-md-6 pull-bottom">
+                        <br />
+                        <br />
+                        <br />
+                        <a href="projects.html"><p>Projects</p></a>
+                        <a href="blog.html"> <p>Blog</p></a>
+                        <a href="contact.html"><p>Contact</p></a>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <h3>Newsletter</h3>
+
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Email Addres">
+                        <span class="input-group-addon glyphicon glyphicon-send"></span>
+                    </div>
+
+                    <i class="fa fa-phone" aria-hidden="true">(123)456-789</i>
+                    <i class="fa fa-envelope" aria-hidden="true"><a href="#">mail@example.ru</a></i>
+                </div>
+                <div class="col-md-12">
+                    <div class="footer-copyright">© Copyright 2017. All Rights Reserved.</div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="romb"></div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="~/content/js/main.js"></script>
+    <script src="~/content/js/owl.carousel.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+    @RenderSection("script2",required:false)
+</body>
+</html>
+

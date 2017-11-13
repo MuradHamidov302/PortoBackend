@@ -1,0 +1,121 @@
+﻿@model PortoWork.Models.Blog
+@{
+    ViewBag.Title = "BlogDetail";
+    Layout = "~/Views/Shared/_PortoLayout.cshtml";
+}
+
+
+
+<section id="blog-detal">
+    <div class="head  ">
+        <h1 class=" pull-right">Blog</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12 textlong">
+                <div class="col-md-3">
+                    <div class="date">
+                        <h3>@Model.add_date1.Day</h3>
+                        <p>@Model.add_date1.ToString("MMM")</p>
+                    </div>
+                </div>
+                <h1>@Model.title</h1>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-8">
+                    <p>@Model.head_text</p>
+                </div>
+                <div class="col-md-4 pull-right">
+                    <img src="~/Content/img/@Model.img_name" style="width:425px;height:200px;" alt="">
+                </div>
+
+                <div class="col-md-12">
+                    <p>@Model.main_text</p>
+                </div>
+            </div>
+
+            <div class="author">
+                <div class="col-md-12">
+                    <h3>Author</h3>
+                    <img class="img-thumbnail" src="~/Content/img/blog-det/22.jpg" alt="">
+                    <h4>@Model.User1.user_name</h4>
+                    <p>@Model.User1.user_about</p>
+                </div>
+            </div>
+            <div class="comment">
+                <div class="col-md-12">
+                    <h3>Comments</h3>
+                    <ul>
+                        @foreach (var item in Model.Comments.ToList())
+                        {
+                            <li style="margin-bottom:10px;">
+                                <img class="img-thumbnail" src="~/Content/img/blog-det/23.jpg" alt="">
+                                <div class="block">
+                                    <h4>@item.User1.user_name</h4> 
+                                    @if(Convert.ToInt32(Session["userid"])==item.user_id) {
+                                        <a class="btn btn-danger" style="color:white;" href="~/BlogDetail/Remove/@item.com_id">Remove</a>
+                                    }
+                                    <p>@item.text.</p>
+                                </div>
+                            </li>
+                        }
+                  
+                    </ul>
+                </div>
+            </div>
+
+            @if (Session["userid"] != null)
+            {
+                <div class="form">
+
+                    <form role="form">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <h4>Comment *</h4>
+                                <textarea maxlength="5000" data-msg-required="Please enter your message." rows="7" class="form-control" name=" message" id="com" required aria-required="true"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <input type="submit" id="look" value="Post Comment" class="btn  mb-xlg" data-loading-text="Loading...">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            }
+            else
+            {<h3>add comment</h3>}
+              
+
+            
+        </div>
+    </div>
+</section>
+
+@section script2{
+
+
+    <script>
+        
+        $(document).ready(function () {
+            $("#look").click(function () {
+                var comm = $("#com").val();
+                $.ajax({
+                    url: "/BlogDetail/Comms/",
+                    data: { com :comm, blog:@Model.blog_id},
+                    type: 'POST',
+                    dataType: 'json',
+                    success: function (data) {
+                      
+                    }
+
+                });
+            });
+        });
+
+
+</script>
+    
+    }

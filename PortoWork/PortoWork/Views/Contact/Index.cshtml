@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_PortoLayout.cshtml";
+}
+
+
+<section id="contact">
+    <div class="head  ">
+        <h1 class=" pull-right">Contact</h1>
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <h2>Send Us a Message</h2>
+                <p>Contact us or give us a call to discover how we can help.</p>
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <input type="text" placeholder="Your Name" value data-msg-required="Please enter your name." maxlength="100" class="form-control name=" name" id="name" required aria-required="true">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <input type="email" placeholder="Your E-mail" value data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control name=" email" id="email" required aria-required="true">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <input type="text" placeholder="Subject" value data-msg-required="Please enter the subject." maxlength="100" class="form-control name=" subject" id="subject" required aria-required="true">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <textarea maxlength="5000" placeholder="Message" data-msg-required="Please enter your message." rows="5" class="form-control name=" message" id="message" required aria-required="true"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <input type="submit" value="Send Message" class="btn  mb-xlg" data-loading-text="Loading...">
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4 col-md-offset-1">
+                <h4>Corporate Headquarters</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1519.6959648088166!2d49.852897507152534!3d40.37800541590539!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfa4594c97092ca01!2sAF+Business+House!5e0!3m2!1saz!2s!4v1498498624502" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                <ul>
+                    <li>
+                        <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+                        <strong>Address: </strong>1234 Street Name, City Name
+                    </li>
+                    <li>
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <strong>Phone:</strong>(123) 456-789
+                    </li>
+                    <li>
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        <strong>Email:</strong>
+                        <a href="#">mail@example.com</a>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
