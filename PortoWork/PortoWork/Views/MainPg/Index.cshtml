@@ -12,15 +12,11 @@
         <div class="row">
             <div class="large-12 columns">
                 <div class="owl-carousel owl-theme">
-
-
                     <div class="item">
                         <img src="~/content/img/slider1.jpg" alt="">
                     </div>
                 </div>
             </div>
-
-
         </div>
     </div>
 </section>
@@ -75,7 +71,6 @@
             <div class="romb2 "></div>
         </div>
     </div>
-
 </section>
 
 <section id="projects">
@@ -160,20 +155,25 @@
                 <div class="col-md-12">
 
                     <div class="col-md-6  ">
-
                         <div class="text">
                             <i class="pull-left fa fa-quote-left fa-2x" aria-hidden="true"></i>
-                            <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce ante tellus, convallis non consectetur sed, pharetra nec ex.</p>
+                            <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Sed eget risus porta, tincidunt turpis at, interdum tortor. 
+                            Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                            Fusce ante tellus, convallis non consectetur sed, pharetra nec ex.</p>
                             <i class="pull-right fa fa-quote-right fa-2x" aria-hidden="true"></i>
                             <h3>Ana Smith</h3>
                             <p>Porto Magazine</p>
                         </div>
                     </div>
-                    <div class="col-md-6">
 
+                    <div class="col-md-6">
                         <div class="text">
                             <i class="pull-left fa fa-quote-left fa-2x" aria-hidden="true"></i>
-                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget risus porta, tincidunt turpis at, interdum tortor. Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Sed eget risus porta, tincidunt turpis at, interdum tortor. 
+                            Suspendisse potenti. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                             <i class="pull-right fa fa-quote-right fa-2x" aria-hidden="true"></i>
                             <h3>Jessica Smith</h3>
                             <p>Porto Magazine</p>
@@ -227,7 +227,7 @@
             </div>
             @foreach (var item in Model.blog.OrderByDescending(item=>item.add_date1).Take(3))
             {
-                <div class="col-md-4" style="margin-left:5px; overflow:hidden;">
+                <div class="col-md-4" style=" overflow:hidden;">
                     <div class="col-md-12">
                         <a href="~/BlogDetail/Index/@item.blog_id">
                             <img src="~/Content/img/@item.img_name" style="width:425px;height:200px;" alt="">
