@@ -1,4 +1,4 @@
-﻿
+﻿@model PortoWork.Models.Project
 @{
     ViewBag.Title = "Project Detail";
     Layout = "~/Views/Shared/_PortoLayout.cshtml";
@@ -19,7 +19,7 @@
                 </div>
 
                 <div class="col-md-10 pull-left">
-                    <h2>Porto Building</h2>
+                    <h2>@Model.pro_name</h2>
                 </div>
 
                 <div class="col-md-1 pull-right">
@@ -30,27 +30,27 @@
             <div class="clear"></div>
             <hr>
             <div class="col-md-4">
-                <img src="img/1.jpg" alt="">
+                <img src="~/Content/img/1.jpg" alt="">
             </div>
             <div class="col-md-8">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus nibh sed elimttis adipiscing. Fusce in hendrerit purus. Suspendisse potenti. Proin quis eros odio, dapibus dictum mauris. Donec nisi libero, adipiscing id pretium eget, consectetur sit amet leo. Nam at eros quis mi egestas fringilla non nec purus.</p>
+                <p>@Model.pro_text</p>
                 <div class="col-md-5">
                     <ul>
                         <li>
                             PROJECT LOCATION :
-                            <p>New York</p>
+                            <p>@Model.City.city_name</p>
                         </li>
                         <li>
                             PROJECT TYPE:
-                            <p>General Construction</p>
+                            <p>@Model.Service.serv_name</p>
                         </li>
                         <li>
                             PROJECT COST:
-                            <p>$100,000</p>
+                            <p>@Model.cost</p>
                         </li>
                         <li>
                             CLIENT:
-                            <p>Okler Themes</p>
+                            <p>@Model.User1.user_name</p>
                         </li>
                     </ul>
                 </div>

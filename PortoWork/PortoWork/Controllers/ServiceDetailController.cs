@@ -17,14 +17,14 @@ namespace PortoWork.Controllers
         {
             if (id == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return Content("Id not found");
             }
-            Service ser = db.Services.Find(id);
-            if (ser == null)
+            var serviceid = db.Services.Where(b => b.serv_id == id).SingleOrDefault();
+            if (serviceid == null)
             {
-                return HttpNotFound();
+                return Content("Id not found");
             }
-            return View(ser);
+            return View(serviceid);
         }
     }
 }

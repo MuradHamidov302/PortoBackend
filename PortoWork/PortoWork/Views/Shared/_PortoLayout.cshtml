@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Porto</title>
+    <title> @ViewBag.Title</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
@@ -36,23 +36,13 @@
                     <div class="col-md-7">
 
                         <ul class="nav navbar-nav navbar">
-                            <li>@Html.ActionLink("Home","Index","MainPg")</li>
-                            <li>@Html.ActionLink("Company","Index","Company")</li>
-                            <li class="dropdown">
-                                <a href="/Service/Index" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                    SERVICE <span class="caret"></span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                   
-                                   
-                                        <li>@Html.ActionLink("Home" , "Index", "Service")</li>
-                                 
-                                </ul>
-                            </li>
-                            <li>
-                            <li>@Html.ActionLink("Project", "Index", "Project")</li>
-                            <li>@Html.ActionLink("Blog", "Index", "Blog")</li>
-                            <li>@Html.ActionLink("Contact", "Index", "Contact")</li>
+                            <li>@Html.ActionLink("HOME","Index","MainPg")</li>
+                            <li>@Html.ActionLink("COMPANY","Index","Company")</li>
+                            <li >@Html.ActionLink("SERVICE","Index","Service")</li>
+                           
+                            <li>@Html.ActionLink("PROJECT", "Index", "Project")</li>
+                            <li>@Html.ActionLink("BLOG", "Index", "Blog")</li>
+                            <li>@Html.ActionLink("CONTACT", "Index", "Contact")</li>
 
                             <li class="dropdown">
                                 @if (Session["userid"] == null)
@@ -62,8 +52,8 @@
                                         <span class="caret"></span>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li>@Html.ActionLink("Sing in", "Login1", "Login")</li>
-                                        <li>@Html.ActionLink("Register", "Create", "Login")</li>
+                                        <li>@Html.ActionLink("LOG IN", "Login1", "Login")</li>
+                                        <li>@Html.ActionLink("REGISTRATION", "Create", "Login")</li>
                                         
 
                                     </ul>
@@ -75,18 +65,18 @@
                                         <span class="caret"></span>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="/Login/Index/@Session["userid"]">Profil</a></li>
+                                        <li><a href="/Login/Index/@Session["userid"]">MY PROFIL</a></li>
 
                                     @if(Convert.ToInt32(Session["usertype"])==2)
                                     {
-                                        <li>@Html.ActionLink("AdminPanel", "Index", "Admin/Home")</li>
-                                        <li>@Html.ActionLink("Add project", "Create", "Admin/Projects")</li>
-                                        <li>@Html.ActionLink("Add services", "Create", "Admin/Services")</li>
+                                        <li>@Html.ActionLink("ADMIN PANEL", "Index", "Admin/Home")</li>
+                                        <li>@Html.ActionLink("+ NEW PROJECT", "Create", "Admin/Projects")</li>
+                                        <li>@Html.ActionLink("+ NEW SERVICES", "Create", "Admin/Services")</li>
                                     }
                                          
-                                        <li>@Html.ActionLink("Add Blog", "Blogadd", "AddCommon")</li>
+                                        <li>@Html.ActionLink("+ NEW BLOG","Blogadd", "AddCommon")</li>
                                         
-                                        <li>@Html.ActionLink("Log out", "Logout", "Login")</li>
+                                        <li>@Html.ActionLink("LOG OUT", "Logout", "Login")</li>
 
                                     </ul>
                                     
@@ -121,17 +111,17 @@
                 <div class="col-md-4">
                     <div class="col-md-6 pull-bottom">
                         <h3>Navigation</h3>
-                        <a href="index.html"> <p>Home</p></a>
-                        <a href="company.html"><p>Company</p></a>
-                        <a href="services.html"> <p>Services</p></a>
+                        <a href="~/MainPg/Index"> <p>Home</p></a>
+                        <a href="~/Company/Index"><p>Company</p></a>
+                        <a href="~/Service/Index"> <p>Services</p></a>
                     </div>
                     <div class="col-md-6 pull-bottom">
                         <br />
                         <br />
                         <br />
-                        <a href="projects.html"><p>Projects</p></a>
-                        <a href="blog.html"> <p>Blog</p></a>
-                        <a href="contact.html"><p>Contact</p></a>
+                        <a href="~/Project/Index"><p>Projects</p></a>
+                        <a href="~/Blog/Index"> <p>Blog</p></a>
+                        <a href="~/Contact/Index"><p>Contact</p></a>
                     </div>
                 </div>
 

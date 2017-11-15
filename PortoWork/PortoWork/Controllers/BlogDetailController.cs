@@ -11,9 +11,17 @@ namespace PortoWork.Controllers
     {
         PortoDB db = new PortoDB();
         // GET: BlogDetail
-        public ActionResult Index(int id)
+        public ActionResult Index(int? id)
         {
+            if (id == null)
+            {
+                return Content("Id not found");
+            }
             var det = db.Blogs.Where(b => b.blog_id == id).SingleOrDefault();
+            if (det == null)
+            {
+                return Content("Id not found");
+            }
             return View(det);
         }
 

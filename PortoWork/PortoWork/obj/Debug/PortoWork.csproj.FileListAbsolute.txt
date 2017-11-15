@@ -86,7 +86,6 @@ C:\Users\TexnoUsta\Desktop\Porto3\PortoWork\PortoWork\bin\Microsoft.AI.Dependenc
 C:\Users\TexnoUsta\Desktop\Porto3\PortoWork\PortoWork\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\TexnoUsta\Desktop\Porto3\PortoWork\PortoWork\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\TexnoUsta\Desktop\Porto3\PortoWork\PortoWork\bin\Microsoft.AI.Web.xml
-C:\Users\TexnoUsta\Desktop\Porto3\PortoWork\PortoWork\obj\Debug\PortoWork.csprojResolveAssemblyReference.cache
 C:\Users\TexnoUsta\Desktop\Porto3\PortoWork\PortoWork\obj\Debug\PortoWork.csproj.CoreCompileInputs.cache
 C:\Users\TexnoUsta\Desktop\Porto3\PortoWork\PortoWork\obj\Debug\PortoWork.dll
 C:\Users\TexnoUsta\Desktop\Porto3\PortoWork\PortoWork\obj\Debug\PortoWork.pdb
