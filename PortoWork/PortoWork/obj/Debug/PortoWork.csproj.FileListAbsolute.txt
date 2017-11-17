@@ -89,3 +89,4 @@ C:\Users\TexnoUsta\Desktop\Porto3\PortoWork\PortoWork\bin\Microsoft.AI.Web.xml
 C:\Users\TexnoUsta\Desktop\Porto3\PortoWork\PortoWork\obj\Debug\PortoWork.csproj.CoreCompileInputs.cache
 C:\Users\TexnoUsta\Desktop\Porto3\PortoWork\PortoWork\obj\Debug\PortoWork.dll
 C:\Users\TexnoUsta\Desktop\Porto3\PortoWork\PortoWork\obj\Debug\PortoWork.pdb
+C:\Users\TexnoUsta\Desktop\Porto3\PortoWork\PortoWork\obj\Debug\PortoWork.csprojResolveAssemblyReference.cache

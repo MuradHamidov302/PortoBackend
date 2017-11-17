@@ -15,25 +15,19 @@ namespace PortoWork
 
             routes.MapRoute(
                name: "BlogDetail",
-               url: "blogs/detail-id/{id}",
+               url: "blog/detail-id/{id}",
                defaults: new { controller = "BlogDetail", action = "Index", id = UrlParameter.Optional });
 
             routes.MapRoute(
               name: "Blog",
-              url: "blogs/{ Action}/ ",
+              url: "blog/{ Action}/ ",
               defaults: new { controller = "Blog", action = "Index"});
 
-            routes.MapRoute(
-             name: "Error",
-             url: "Error/{Id}",
-             defaults: new { controller = "Error", action = "Errors", id = UrlParameter.Optional }
-         );
 
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "MainPg", action = "Index", id = UrlParameter.Optional }
-            );
+                defaults: new { controller = "MainPg", action = "Index", id = UrlParameter.Optional });
         }
     }
 }

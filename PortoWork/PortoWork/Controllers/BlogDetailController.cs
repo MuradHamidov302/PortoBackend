@@ -15,12 +15,12 @@ namespace PortoWork.Controllers
         {
             if (id == null)
             {
-                return Content("Id not found");
+                return RedirectToAction("Blog", "Index");
             }
             var det = db.Blogs.Where(b => b.blog_id == id).SingleOrDefault();
             if (det == null)
             {
-                return Content("Id not found");
+                return RedirectToAction("Blog", "Index");
             }
             return View(det);
         }
